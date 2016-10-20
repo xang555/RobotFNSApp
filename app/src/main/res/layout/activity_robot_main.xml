@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_robot_main"
+    android:layout_width="match_parent"
+    android:background="@android:color/black"
+    android:layout_height="match_parent"
+    tools:context="com.app.xang.robot.robotfns.RobotMainActivity">
+
+    <LinearLayout
+        android:background="@drawable/background_tab_status"
+        android:orientation="horizontal"
+        android:layout_width="564dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintHorizontal_bias="0.6"
+        android:id="@+id/contianerstatus">
+
+        <Button
+            android:text="Connect Robot"
+            android:layout_width="203dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btnconnect" />
+
+        <TextView
+            android:text="No Connect Robot"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:id="@+id/txtstatus"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="@drawable/arrow_controller_background"
+        android:layout_width="249dp"
+        android:layout_height="215dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/contianerstatus"
+        android:id="@+id/relativeLayout">
+
+        <ImageButton
+            android:layout_width="@dimen/brn_size"
+            android:layout_height="@dimen/brn_size"
+            app:srcCompat="@drawable/down_arrow"
+            android:id="@+id/btndown"
+            android:layout_below="@+id/btnright"
+            android:layout_alignLeft="@+id/btnup"
+            android:layout_alignStart="@+id/btnup" />
+
+        <ImageButton
+            android:layout_width="@dimen/brn_size"
+            android:layout_height="@dimen/brn_size"
+            app:srcCompat="@drawable/up_arrow"
+            android:id="@+id/btnup"
+            android:layout_above="@+id/btnleft"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="@dimen/brn_size"
+            android:layout_height="@dimen/brn_size"
+            app:srcCompat="@drawable/left_arrow"
+            android:id="@+id/btnleft"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btndown"
+            android:layout_toStartOf="@+id/btndown" />
+
+        <ImageButton
+            android:layout_width="@dimen/brn_size"
+            android:layout_height="@dimen/brn_size"
+            app:srcCompat="@drawable/right_arrow"
+            android:id="@+id/btnright"
+            android:layout_below="@+id/btnup"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="17dp"
+            android:layout_marginEnd="17dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/arrow_controller_background"
+        android:layout_width="265dp"
+        android:layout_height="218dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/contianerstatus"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/relativeLayout"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintVertical_bias="0.47000003">
+
+
+        <ImageButton
+            android:layout_width="@dimen/brn_size"
+            android:layout_height="@dimen/brn_size"
+            app:srcCompat="@drawable/xbutton"
+            android:id="@+id/btnmultiply"
+            android:elevation="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="@dimen/brn_size"
+            android:layout_height="@dimen/brn_size"
+            app:srcCompat="@drawable/pilamitbutton"
+            android:id="@+id/btntriangle"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/btnmultiply"
+            android:layout_alignStart="@+id/btnmultiply" />
+
+        <ImageButton
+            android:layout_width="@dimen/brn_size"
+            android:layout_height="@dimen/brn_size"
+            app:srcCompat="@drawable/recbutton"
+            android:id="@+id/btnrectangle"
+            android:layout_alignTop="@+id/btncircles"
+            android:layout_toRightOf="@+id/btnmultiply"
+            android:layout_toEndOf="@+id/btnmultiply" />
+
+        <ImageButton
+            android:layout_width="@dimen/brn_size"
+            android:layout_height="@dimen/brn_size"
+            app:srcCompat="@drawable/obutton"
+            android:id="@+id/btncircles"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
